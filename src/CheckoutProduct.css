@@ -11,6 +11,7 @@
 .checkoutProduct_info>button {
     background-color: #1761a0;
     border: 1px solid;
+    height: 25px;
     margin-top: 10px;
     border-color: darkgoldenrod;
     color: #111;
