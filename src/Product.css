@@ -10,6 +10,12 @@
     min-width: 100px;
     background-color: white;
     z-index: 1;
+    border-radius: 5px;
+    background: white;
+}
+
+.product:hover {
+    transform: scale3d(1.006, 1.006, 0.5);
 }
 
 .product_rating {
