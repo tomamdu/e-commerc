@@ -1,5 +1,6 @@
 .payment {
     background-color: white;
+    padding-bottom: 100px;
 }
 
 .payment_container>h1 {
@@ -26,6 +27,7 @@
 }
 
 .payment_address,
-.payment_addr {
+.payment_addr,
+.payment_details {
     flex: 0.7;
 }
