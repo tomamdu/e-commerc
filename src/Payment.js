@@ -1,5 +1,5 @@
 import React,{ useState,useEffect } from "react";
-import './Payment.css'
+import './css/Payment.css'
 import {useStateValue} from "./StateProvider"
 import CheckoutProduct from './CheckoutProduct';
 import { Link,useHistory } from 'react-router-dom';
@@ -17,28 +17,35 @@ function Payment() {
     const elements = useElements();
     
     const [succeeded, setSucceeded] = useState(false);
-    const [processing, setProcessing] = useState("");
+    const [processing, setProcessing] = useState(false);
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
-    const [clientSecret, setClientSecret] = useState(true);
+    const [clientSecret, setClientSecret] = useState('');
 
     useEffect(() => {
         //generete the special stripe secret which allows us to change a customer
 
         const getClientSecret = async () => {
-            const response = await axios({
-                method: 'post',
-                //stripe expects the total in a currencies subunits
-                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
-            });
-            setClientSecret(response.data.clientSecret)
+            try {
+                const response = await axios({
+                
+                    method: 'post',
+                    //stripe expects the total in a currencies subunits
+                    url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+                });
+                console.log(response.data, 'response.data')
+                setClientSecret(response.data.clientSecret)
+                console.log('THE SECRET IS>>>', clientSecret)
+
+            } catch(e) {
+                console.log(e, 'error...')
+            }
         }
 
         getClientSecret();
     }, [basket])
 
-    console.log('THE SECRET IS>>>', clientSecret)
-
+    
     const handleSubmit = async (event) => {
         //stripe stuff... 
         event.preventDefault();

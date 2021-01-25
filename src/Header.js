@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from './images/Logo.png';
-import "./Header.css";
+import "./css/Header.css";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { Link } from 'react-router-dom';
@@ -17,13 +17,14 @@ function Header() {
     return (
         
         <div className="header">
+            
            <Link to="/">
              <img 
                 className="header_logo"
                 src={Logo} 
                 alt="" 
              />
-        </Link>
+           </Link>
             <div className="header_search">
                 <input
                 className="header_searchInput"

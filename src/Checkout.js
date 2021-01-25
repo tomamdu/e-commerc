@@ -1,6 +1,6 @@
 import { Title } from '@material-ui/icons';
 import React from 'react'
-import './Checkout.css';
+import './css/Checkout.css';
 import CheckoutProduct from './CheckoutProduct';
 import { getBasketTotal } from './reducer';
 import Subtotal from './Subtotal';
@@ -20,6 +20,7 @@ function Checkout() {
                     <h3>
                         Hello,{user?.email}
                     </h3>
+                    
                     <h2 className="checkout_title" >
                         Your shopping Basket
                     </h2>
@@ -38,8 +39,8 @@ function Checkout() {
                 </div>
             </div>
             <div className="checkout_right">
-                <Subtotal/>
-            </div>
+                        <Subtotal/>
+                    </div>
         </div>
     )
 }

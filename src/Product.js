@@ -1,5 +1,5 @@
 import React from 'react'
-import './Product.css'
+import './css/Product.css'
 import {useStateValue} from "./StateProvider";
 
 function Product({id,title,image,price,rating}) {
@@ -21,27 +21,43 @@ function Product({id,title,image,price,rating}) {
     return (
         <div 
             className="product">
-            <div className="product_info">
-                <p>{title}</p>
-                <p  className="product_price">
-                    <small>$</small>
-                    <strong>{price}</strong>
-               </p>
-               <div className="product_rating">
-                   {Array(rating).fill().map((_, i)=>(
-                    <p>⭐</p>
-                   ))}
+             <div className="card"style = {{width: '18rem'}}>
+             <div class="card-body" >
+                    <div className="product_info">
+                        <p>{title}</p>
+                        <p  className="product_price">
+                            <small>$</small>
+                            <strong>{price}</strong>
+                       </p>
+                        <div className="product_rating">
+                            {Array(rating).fill().map((_, i)=>(
+                                <p>⭐</p>
+                            ))}
+                                
+                        </div>
+
+                    </div>
                     
-               </div>
+               
+                
+                    <img
+                    className="i"
+                    src={image}
+                    alt=""
+                    />
+                    <div className="b">
+                 <button onClick={addToBasket}>Add to Basket</button>
+             {  /** <button type="button" class="btn btn-primary">Primary</button>*/ }
             </div>
-
-            <img
-               src={image}
-               alt=""
-            />
-
-            <button onClick={addToBasket}>Add to Basket</button>
+             </div>
+            
+             
         </div>
+                    
+                    
+
+
+        </div>   
     )
 }
 
