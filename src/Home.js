@@ -21,7 +21,7 @@ function Home() {
                     <div class="col-10">
                                 <div className="row">
                                     
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                 
                                         <Product title="Brush the best brand ever streat from Europe
                                                         cheap price for the beter look just try it" 
@@ -29,7 +29,7 @@ function Home() {
                                         image={product1} rating={3}/>
                                     </div>
                                     
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                     
                                         <Product title="Brush the best brand ever streat from Europe
                                                         cheap price for the beter look just try it" 
@@ -37,15 +37,7 @@ function Home() {
                                         image={product1} rating={3}/>
                                     </div>
                                     
-                                    <div class="col-4">
-                                    
-                                        <Product title="Brush the best brand ever streat from Europe
-                                                        cheap price for the beter look just try it" 
-                                        price={22.50}
-                                        image={product1} rating={3}/>
-                                    </div>
-                                   
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                     
                                         <Product title="Brush the best brand ever streat from Europe
                                                         cheap price for the beter look just try it" 
@@ -53,7 +45,15 @@ function Home() {
                                         image={product1} rating={3}/>
                                     </div>
                                    
-                                    <div class="col-4">
+                                    <div class="col-md-4">
+                                    
+                                        <Product title="Brush the best brand ever streat from Europe
+                                                        cheap price for the beter look just try it" 
+                                        price={22.50}
+                                        image={product1} rating={3}/>
+                                    </div>
+                                   
+                                    <div class="col-md-4">
                                     
                                         <Product title="Brush the best brand ever streat from Europe
                                                         cheap price for the beter look just try it" 
@@ -61,7 +61,7 @@ function Home() {
                                         image={product1} rating={3}/>
                                     </div>
 
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                     
                                         <Product title="Brush the best brand ever streat from Europe
                                                         cheap price for the beter look just try it" 
@@ -69,7 +69,7 @@ function Home() {
                                         image={product1} rating={3}/>
                                     </div>
 
-                                    <div class="col-4">
+                                    <div class="col-md-4">
                                     
                                         <Product title="Brush the best brand ever streat from Europe
                                                         cheap price for the beter look just try it" 
