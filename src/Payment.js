@@ -61,22 +61,18 @@ function Payment() {
             }
         }).then(({paymentIntent})=>{
             //paymentIntent = payment confirmation
-            console.log({
-                basket: basket,
-                amount: paymentIntent.amount,
-                created: paymentIntent.created,
-                uid: user?.uid
-            })
-
+            
+               var ba = Object.assign({},basket)
+               
             db
               .collection('orders')
               .add({
-                  basket: basket,
+                  basket: JSON.stringify(ba),
                   amount: paymentIntent.amount,
                   created: paymentIntent.created,
                   uid: user?.uid
               }).then(v => {
-                console.log(v, 'valu');
+                console.log(v, 'value');
               }).catch(e => {
                   console.log(e, 'error');
                   
